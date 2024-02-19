@@ -63,6 +63,8 @@ img {
 .header .container {
   display: flex;
   align-items: center;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-nav {
   display: flex;
@@ -90,6 +92,7 @@ img {
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -105,6 +108,7 @@ img {
   border-radius: 2px;
   width: 100%;
   bottom: -1px;
+  background-color: #404bbf;
 }
 .header-address {
   line-height: 150%;
@@ -120,6 +124,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
@@ -141,6 +146,7 @@ img {
     url(/images/hero-logo.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: cover;
 }
 .solution-title {
   max-width: 496px;
@@ -169,8 +175,8 @@ img {
   display: block;
   margin: 0 auto;
   transition-property: background-color;
-  transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
 .btn:focus {
@@ -189,11 +195,16 @@ img {
   width: calc((100% - 24px * 3) / 4);
 }
 .benefits-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 264px;
   height: 112px;
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 .benefits-block-pic {
   position: absolute;
@@ -273,6 +284,10 @@ img {
   justify-content: center;
 }
 .team-links-item {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-socials {
+  fill: #f4f4fd;
 }
 .socials-link {
   display: flex;
@@ -286,7 +301,8 @@ img {
   transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus {
   background-color: #404bbf;
 }
 
@@ -347,9 +363,13 @@ img {
   letter-spacing: 0.02em;
   background: #4d5ae5;
 }
-.portfolio-list-item:hover .overlay,
-.portfolio-list-item:focus .overlay {
+.portfolio-list-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-list-item:hover .overlay {
   transform: translateY(0);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-text {
   font-size: 16px;
@@ -391,6 +411,7 @@ img {
 }
 .footer-wraper {
   display: flex;
+  align-items: baseline;
   gap: 120px;
 }
 .footer-socials-text {
